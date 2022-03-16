@@ -19,7 +19,8 @@ body {
 /* Barra de navegación de la página */
 
 .sup-bar {
-    background-color: rgba(0, 0, 255, 0.253);
+    background-color: rgb(0, 0, 0);
+    border-bottom: 1px solid #bebebe;
     margin: 0;
     padding: 0;
     position: absolute;
@@ -29,10 +30,98 @@ body {
     align-items: center;
 }
 
+/* Título principal de ROEK */
 .main-title {
-    background-color: rgba(255, 0, 0, 0.37);
     padding: 0;
     margin: 0;
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: "Aldrich";
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.35em;
+
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.main-title h1 a {
+    color: #c4c4c4;
+    text-decoration: none;
+
+    transition-duration: 0.2s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.main-title h1 a:hover{
+    color: #ff5328;
+}
+
+.main-title:hover{
+    transform: scale(1.2);
+}
+
+/* Listado de navegación */
+.nav-bar {
+    width: 60%;
+}
+
+.nav-ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-li {
+    position: relative;
+    font-family: "Titillium Web";
+    font-weight: normal;
+    font-size: 1.2em;
+    letter-spacing: 0.05em;
+
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+
+}
+
+.nav-li a {
+    text-decoration: none;
+    color: #c4c4c4;
+
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.nav-li a:hover {
+    color: #ff5328;
+}
+
+.nav-li:hover{
+    transform: scale(1.1);
+}
+
+/*  Dropdown Menu  */
+.dropdown-ul {
+    background-color: #000000;
+    position: absolute;
+    display: none;
+    z-index: 1;
+    padding: 0;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 0.5em 0.5em;
+    /* Arriba, derecha, abajo, izquierda */
+    margin: 0.5em 1em 0.3em 0.3em;
+}
+
+.nav-li:hover .dropdown-ul{
+    display: block;
 }

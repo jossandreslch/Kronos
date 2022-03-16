@@ -1,4 +1,40 @@
+/* Aldrich */
+
 @font-face {
     font-family: "Aldrich";
     src: url("./Aldrich/Aldrich-Regular.ttf");
+}
+
+/* Monda */
+
+@font-face {
+    font-family: "Monda";
+    src: url("./Monda/Monda-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Monda";
+    src: url("./Monda/Monda-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Roboto */
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./Roboto/Roboto-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Titillium Web */
+
+@font-face {
+    font-family: "Titillium Web";
+    src: url("./Titillium_Web/TitilliumWeb-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
 }
