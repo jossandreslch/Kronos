@@ -71,7 +71,7 @@ body {
 
 /* Listado de navegación */
 .nav-bar {
-    width: 60%;
+    width: 55%;
 }
 
 .nav-ul {
@@ -129,4 +129,33 @@ body {
 
 .nav-li:hover .dropdown-ul{
     display: block;
+}
+
+/*  Icono de GitHub  */
+.icon-github {
+    font-size: 2em;
+    margin: 0 1.5em 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.icon-github:hover {
+    transform: scale(1.2);
+}
+
+.icon-github a {
+    color:#c4c4c4;
+
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.icon-github a:hover {
+    color:#ff5328;
 }
