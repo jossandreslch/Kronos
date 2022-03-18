@@ -9,15 +9,18 @@ body {
 .section-a {
     width: 100%;
     height: 100vh;
-    background-image: url('../img/main-background.jpg');
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+
+    position: absolute;
 }
 
 #particles-js {
     height: 100vh;
+    width: 100%;
     margin: 0 auto;
+    background-image: url('../img/main-background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Barra de navegación de la página */
@@ -27,7 +30,6 @@ body {
     border-bottom: 1px solid #bebebe;
     margin: 0;
     padding: 0;
-    position: absolute;
     display: flex;
     width: 100%;
     height: 4.5em;
@@ -47,7 +49,7 @@ body {
     align-items: center;
     letter-spacing: 0.35em;
 
-    transition-duration: 0.4s;
+    transition-duration: 0.6s;
     transition-property: all;
     transition-timing-function: ease-in-out;
 }
@@ -56,7 +58,7 @@ body {
     color: #c4c4c4;
     text-decoration: none;
 
-    transition-duration: 0.2s;
+    transition-duration: 0.3s;
     transition-property: all;
     transition-timing-function: ease-in-out;
 }
@@ -66,7 +68,7 @@ body {
 }
 
 .main-title:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 /* Listado de navegación */
@@ -88,10 +90,23 @@ body {
     font-size: 1.1em;
     letter-spacing: 0.05em;
 
-    transition-duration: 0.4s;
+}
+
+.nav-li::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #ff5328;
+    display: block;
+    margin: auto;
+
+    transition-duration: 0.3s;
     transition-property: all;
     transition-timing-function: ease-in-out;
+}
 
+.nav-li:hover::after{
+    width: 100%;
 }
 
 .nav-li a {
@@ -107,10 +122,6 @@ body {
     color: #ff5328;
 }
 
-.nav-li:hover{
-    transform: scale(1.1);
-}
-
 /*  Dropdown Menu  */
 .dropdown-ul {
     background-color: #000000;
@@ -118,6 +129,8 @@ body {
     display: none;
     z-index: 1;
     padding: 0;
+
+    border-bottom: 1px solid #bebebe;
 }
 
 .dropdown-item {
@@ -125,6 +138,23 @@ body {
     padding: 0.5em 0.5em;
     /* Arriba, derecha, abajo, izquierda */
     margin: 0.5em 1em 0.3em 0.3em;
+}
+
+.dropdown-item::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #ff5328;
+    display: block;
+    margin: auto;
+
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.dropdown-item:hover::after{
+    width: 100%;
 }
 
 .nav-li:hover .dropdown-ul{
@@ -139,7 +169,7 @@ body {
     justify-content: space-around;
     align-items: center;
 
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
     transition-property: all;
     transition-timing-function: ease-in-out;
 }
@@ -151,11 +181,61 @@ body {
 .icon-github a {
     color:#c4c4c4;
 
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
     transition-property: all;
     transition-timing-function: ease-in-out;
 }
 
 .icon-github a:hover {
     color:#ff5328;
+}
+
+/*  POST-NAVBAR: Presentación central  */
+
+.section-a-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 89vh;
+}
+
+.pres-center{
+    width: 70%;
+    display: inline-block;
+    margin-bottom: 4em;
+}
+
+.kronos-logo {
+    width: fit-content;
+    text-align: center;
+}
+
+.kronos-logo img {
+    width: 7em;
+    cursor: pointer;
+
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.kronos-logo img:hover{
+    filter: drop-shadow(0 0 0.75rem rgb(255, 0, 51));
+    transform: scale(1.1);
+}
+
+.pres-center-p {
+    width: 65%;
+    text-align: center;
+    margin: 0 auto;
+    color: #c4c4c4;
+    font-family: "Roboto";
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+}
+
+.pres-center-p span {
+    color: #ff5328;
+    font-weight: bolder;
 }
