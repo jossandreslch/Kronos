@@ -38,3 +38,19 @@
     font-weight: normal;
     font-style: normal;
 }
+
+/* M_PLUS_2 */
+
+@font-face {
+    font-family: "M Plus 2";
+    src: url('./M_PLUS_2/MPLUS2-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "M Plus 2";
+    src: url('./M_PLUS_2/static/MPLUS2-Thin.ttf');
+    font-weight: thin;
+    font-style: normal;
+}
