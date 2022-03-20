@@ -37,7 +37,7 @@ body {
     align-items: center;
 }
 
-/* Título principal de ROEK */
+/* Título principal de KRONOS  */
 .main-title {
     padding: 0;
     margin: 0;
@@ -262,11 +262,11 @@ body {
     margin-top: 4.6em;
 
 
-    /* Background from https://uigradients.com/#Royal */
-    background: #27120b;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #6e1903, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #6e1903, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    /* Background for the blog from https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/ */
+
+    background-image: url("../img/main-background.jpg");
+    background-position: top;
+    background-size: cover;
 }
 
 .section-b-header {
@@ -282,6 +282,8 @@ body {
     justify-content: center;
 
     margin-bottom: 0;
+
+    border-bottom: 1px solid #292929;
 }
 
 .blogs-title {
@@ -295,31 +297,80 @@ body {
     width: 90%;
     margin-top: 0;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
 }
 
+/* LEFT - COLUMN */
+
 .left-column {
-    background-color: rgba(106, 106, 106, 0.398);
+    background-color: rgba(0, 0, 0, 0.6);
     width: 70%;
     padding: 1em;
+    height: fit-content;
 }
 
 .blogs-article {
     display: block;
     margin-bottom: 3em;
+
+    padding-bottom: 2em;
+
+    border-bottom: 1px solid #3f3f3f;
+}
+
+.blogs-article:last-child{
+    border-bottom: none;
 }
 
 .blogs-article h2 {
-    font-family: "Monda";
+    font-family: "Montserrat";
     text-align: left;
     font-size: 1.7em;
-    margin: 0 0 0 0;
+    margin: 0 0 0.2em 0;
+    width: fit-content;
 }
+
+.blogs-article h2 a {
+    color: #bb4d4d;
+    text-decoration: none;
+
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.blogs-article h2 a:hover {
+    color: #c4c4c4;
+}
+
+/* This is for the border-bottom hover, I took it from an indian youtuber in Youtube*/
+
+.blogs-article h2::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #bb4d4d;
+    display: block;
+    margin: auto;
+
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.blogs-article h2:hover::after{
+    width: 100%;
+}
+
+/* ---------- */
 
 .blogs-article h5 {
     text-align: left;
     font-family: 'Roboto';
     font-size: 0.9em;
     margin: 0 0 0.5em 0;
+    color: #c4c4c4;
 }
 
 .articles-preview{
@@ -336,6 +387,352 @@ body {
     text-align: left;
     font-family: "Roboto";
     letter-spacing: 0.04em;
-    color: #bebebe;
+    color: #c4c4c4;
     padding: 0 0 0 1em;
 }
+
+/* START OF RIGHT COLUMN */
+
+.right-column{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 25%;
+    height: fit-content;
+}
+
+/* START OF SIGNUP MAILCHIMP*/
+
+#mc_embed_signup {
+    border-bottom: 1px solid #292929;
+}
+
+form {
+    border-radius: 12px;
+    padding: 1em;
+    width: auto;
+    font-size: 1.5em;
+    position: relative;
+    /* box-shadow: 0 40px 50px -50px #ff5328; */    
+    text-align: left;
+}
+
+form input {
+    display: block;
+    width: 80%;
+    border-radius: 12px;
+    border: 1px solid #bb4d4d;
+    height: 0.5em;
+    background-color: #00000000;
+    padding: 1em 1em;
+    color: #fff;
+    transition: 0.5s;
+
+    margin: auto;
+}
+
+form input:focus {
+    outline: none;
+    box-shadow: 0px 10px 30px -20px #ff5328;
+    filter: contrast(85%)
+}
+
+form label {
+    color: #c4c4c4;
+    font-weight: lighter;
+    font-family: "Titillium Web";
+    display: inline-block;
+    margin-bottom: 0.5em;
+
+    font-size: 0.8em;
+}
+
+form .subscribe {
+    width: 50%;
+    height: auto;
+    background: #00000000;
+    border: #bb4d4d 2px solid;
+    border-radius: 45px;
+    font-weight: lighter;
+    line-height: normal;
+
+    font-family: "Titillium Web";
+    font-size: 0.8em;
+    padding: 0.3em 0;
+
+    margin: 0 auto;
+
+}
+
+form .subscribe:hover {
+    background: #bb4d4d;
+    color: #151515;
+    cursor: pointer;
+
+}
+
+/* Mailchimp CSS */
+
+form .mc-field-group {
+    margin-bottom: 0.8em;
+}
+
+form .indicates-required {
+    color: #CCCDCF;
+    font-size: 0.5em;
+    margin: 0 0 1em 0;
+    text-align: center;
+
+    font-family: "Roboto";
+    font-size: 0.5em;
+
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+form .indicates-required span {
+    color: #ff5328;
+}
+
+form .indicates-required span a {
+    color: #ff5328;
+    text-decoration: none;
+
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+form .indicates-required span a:hover {
+    color: #bb4d4d;
+}
+
+form .indicates-required:hover {
+    transform: scale(1.1);
+}
+
+form input + .mce_inline_error {
+    display: inline-block;
+    font-size: 0.5em;
+    position: relative;
+}
+
+form input + .mce_inline_error:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #6B0505;
+    position: absolute;
+    top: -10px;
+}
+
+form #mce-success-response {
+    background: green;
+    padding: 25px;
+    text-align: center;
+    color: #fff;
+    border-radius: 12px;
+    transition: 1s;
+    animation: response 1s forwards;
+}
+
+form #mce-error-response {
+    background: #6B0505;
+    padding: 25px;
+    text-align: center;
+    color: #fff;
+    border-radius: 12px;
+    transition: 1s;
+    animation: response 1s forwards;
+}
+form #mce-error-response a {
+    color: #fff;
+}
+
+form label .asterisk {
+    color: #ff5328;
+    font-size: 0.8em;
+    vertical-align: middle;
+}
+
+@keyframes response {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FINALIZA SIGNUP MAILCHIMP */
+
+/* Inicia CONTENIDO RECIENTE */
+
+.last-posts {
+    width: 100%;
+    display: block;
+}
+
+.last-posts h2 {
+    font-family: "Montserrat";
+    color: #c4c4c4;
+    text-align: center;
+    font-size: 1.7em;
+
+    margin-bottom: 0;
+}
+
+.last-posts ul {
+    list-style: disc;
+    color: #c4c4c4;
+
+    padding: 0;
+
+    display: table;
+    margin: 0 auto;
+
+    list-style: none;
+    
+}
+
+.last-posts li {
+    font-family: "Montserrat";
+    font-size: 1.2em;
+
+    margin: 1.5em 0.8em;
+
+    border-bottom: 1px solid #3f3f3f;
+
+    padding-bottom: 0.1em;
+
+
+}
+
+.last-posts li:last-child{
+    border-bottom: none;
+}
+
+.last-posts li a{
+    text-decoration: none;
+    color: #bb4d4d;
+
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.last-posts li a:hover{
+    text-decoration: none;
+    color: #c4c4c4;
+}
+
+.last-posts li span {
+    color: #c4c4c4;
+    font-size: 0.7em;
+    font-family: "Monda";
+    font-weight: lighter;
+}
+
+
+/* FINALIZA CONTENIDO RECIENTE */
+
+/* INICIA FOOTER */
+
+footer {
+
+    background-color: #000000e9;
+    margin-top: 1.5em;
+
+    left: 0;
+    bottom: 0;
+
+    border-top: 1px solid #292929;
+
+
+}
+
+footer .footer-content {
+    width: 70%;
+
+    color: #c4c4c4;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.footer-logo img {
+    width: 2.5em;
+    margin: 1em 0 1em 0;
+
+    cursor: pointer;
+
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.footer-logo:hover{
+    filter: drop-shadow(0 0 0.75rem rgb(255, 0, 51));
+    transform: scale(1.1);
+}
+
+.footer-logo h1 {
+    font-size: 1.5em;
+    font-family: "Aldrich";
+    letter-spacing: 0.2em;
+
+    transition-duration: 0.6s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.footer-logo h1 a {
+    text-decoration: none;
+    color: #ff5328;
+}
+
+.footer-logo h1 a:hover{
+    color: #c4c4c4;
+}
+
+.footer-text {
+    font-family: "Montserrat";
+    letter-spacing: 0.05em;
+    font-size: 0.8em;
+
+    text-align: right;
+}
+
+.footer-text p span {
+    color: #ff5328;
+}
+
+.footer-text p a {
+    color: #c4c4c4;
+    font-size: 1.6em;
+
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.footer-text p a:hover{
+    color: #ff5328;
+}
+
+/* FINALIZA FOOTER */
