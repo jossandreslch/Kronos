@@ -32,7 +32,7 @@ body {
     padding: 0;
     display: flex;
     width: 100%;
-    height: 4.5em;
+    height: 4.3em;
     justify-content: space-around;
     align-items: center;
 }
@@ -89,6 +89,10 @@ body {
     font-weight: normal;
     font-size: 1.1em;
     letter-spacing: 0.05em;
+}
+
+.nav-li:nth-child(2){
+    cursor: pointer;
 }
 
 /* This is for the border-bottom hover, I took it from an indian youtuber in Youtube*/
@@ -213,12 +217,11 @@ body {
 
 .pres-center{
     width: 70%;
-    display: inline-block;
+    display: block;
     margin-bottom: 4em;
 }
 
 .kronos-logo {
-    width: fit-content;
     text-align: center;
 }
 
@@ -254,10 +257,16 @@ body {
 /*  BLOG styled pages  */
 
 .section-b {
-    background-color: rgba(0, 0, 255, 0.356);
     width: 100%;
     position: absolute;
     margin-top: 4.6em;
+
+
+    /* Background from https://uigradients.com/#Royal */
+    background: #27120b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #6e1903, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #6e1903, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }
 
 .section-b-header {
@@ -283,38 +292,50 @@ body {
 }
 
 .blogs-content {
-    background-color: rgba(255, 0, 0, 0.527);
-    width: 98%;
+    width: 90%;
     margin-top: 0;
     margin: auto;
 }
 
 .left-column {
-    background-color: #ff5328;
+    background-color: rgba(106, 106, 106, 0.398);
     width: 70%;
     padding: 1em;
 }
 
 .blogs-article {
-    background-color: rgba(0, 100, 0, 0.507);
     display: block;
+    margin-bottom: 3em;
 }
 
 .blogs-article h2 {
     font-family: "Monda";
     text-align: left;
-    font-size: 2em;
-    margin: 0 0 0.2em 0;
+    font-size: 1.7em;
+    margin: 0 0 0 0;
 }
 
 .blogs-article h5 {
     text-align: left;
     font-family: 'Roboto';
-    font-size: 1em;
-    margin: 0 0 1em 0;
+    font-size: 0.9em;
+    margin: 0 0 0.5em 0;
 }
 
-.blogs-article img{
-    width: 100%;
-    height: 220px;
+.articles-preview{
+    display: flex;
+    justify-content: space-around;
+}
+
+.articles-preview img {
+    width: 13em;
+    height: max-content;
+}
+
+.articles-preview p {
+    text-align: left;
+    font-family: "Roboto";
+    letter-spacing: 0.04em;
+    color: #bebebe;
+    padding: 0 0 0 1em;
 }
