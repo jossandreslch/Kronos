@@ -328,7 +328,8 @@ body {
     text-align: left;
     font-size: 1.7em;
     margin: 0 0 0.2em 0;
-    width: fit-content;
+    /*max-width: fit-content; No funciona Firefox */
+    display: table; /* Para liminar el contenido a únicamente el texto*/
 }
 
 .blogs-article h2 a {
@@ -396,7 +397,7 @@ body {
 .right-column{
     background-color: rgba(0, 0, 0, 0.7);
     width: 25%;
-    height: fit-content;
+    height: min-content;
 }
 
 /* START OF SIGNUP MAILCHIMP*/
@@ -736,3 +737,123 @@ footer .footer-content {
 }
 
 /* FINALIZA FOOTER */
+
+/* INICIA CONTACTO */
+
+.formulario-section-a-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 89vh;
+}
+
+.formulario-pres-center{
+    width: 60%;
+    display: block;
+}
+
+.kronos-logo-contacto {
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.kronos-logo-contacto img {
+    width: 3em;
+    cursor: pointer;
+
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.kronos-logo-contacto img:hover{
+    filter: drop-shadow(0 0 0.75rem rgb(255, 0, 51));
+    transform: scale(1.1);
+}
+
+.formulario {
+
+    width: 50%;
+    margin: auto;
+    border-radius: 0;
+    text-align: left;
+
+}
+
+.formulario ul {
+    list-style: none;
+}
+
+.formulario ul li {
+}
+
+.formulario ul li label {
+    font-family: "Titillium web";
+    font-size: 1em;
+    display: block;
+    margin-top: 0.8em;
+    margin-bottom: 0;
+}
+
+.formulario ul li input {
+    background-color: #ff532800;
+    border: 1px solid #ff5328;
+    width: fit-content;
+    margin: auto;
+    border-radius: 50px;
+    color: #c4c4c4;
+    font-family: "Roboto";
+    font-size: 0.6em;
+}
+
+.formulario textarea {
+    display: block;
+    width: 90%;
+    margin: auto;
+    background-color: #00000000;
+    border: 1px solid #ff5328;
+    border-radius: 12px;
+    color: #c4c4c4;
+    font-family: "Roboto";
+    font-size: 0.6em;
+}
+
+.formulario textarea:focus {
+    outline: none;
+    box-shadow: 0px 10px 30px -20px #ff5328;
+    filter: contrast(85%)}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.button button {
+    font-family: "Montserrat";
+    border-radius: 50px;
+    font-size: 0.8em;
+    padding: 0.5em 1em;
+    border: 1px solid #ff5328;
+
+    background-color: #ff5328;
+    color: #000000;
+
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+
+    cursor: pointer;
+}
+
+.button button:hover {
+    background-color: #00000000;
+    color: #ff5328;
+
+    transform: scale(1.1);
+}
+
+/* FINALIZA CONTACTO */
