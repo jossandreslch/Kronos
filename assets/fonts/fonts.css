@@ -68,3 +68,8 @@
     font-family: "TitleFont";
     src: url('./rocket_wildness/ROCKET\ WILDNESS.ttf');
 }
+
+@font-face {
+    font-family: "Loves";
+    src: url("./loves/LOVES.ttf");
+}
