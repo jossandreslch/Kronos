@@ -294,10 +294,6 @@ body {
     width: 100%;
     height: 50vh;
 
-    background-image: url("../img/temas/header-software.jpg");
-    background-position: center;
-    background-size: cover;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -305,6 +301,34 @@ body {
     margin-bottom: 0;
 
     border-bottom: 1px solid #292929;
+}
+
+#header-software{
+    background-image: url("../img/temas/header-software.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#header-osint{
+    background-image: url("../img/temas/header-OSINT.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#header-ingenieria{
+    background-image: url("../img/temas/header-ingenieria.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#header-politica{
+    background-image: url("../img/temas/header-politica.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .blogs-title {
