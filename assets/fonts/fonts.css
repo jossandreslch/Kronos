@@ -63,3 +63,8 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: "TitleFont";
+    src: url('./rocket_wildness/ROCKET\ WILDNESS.ttf');
+}
