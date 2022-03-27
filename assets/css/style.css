@@ -985,3 +985,66 @@ footer .footer-content {
 .acerca-content-text a:hover {
     color: #ff5328;
 }
+
+/*  ARTICLE'S BEGINNING */
+
+.article-content {
+    padding: 0 1.2em;
+}
+
+.article-content-title {
+    color: #bb4d4d;
+    font-family: "M Plus 2";
+    font-size: 2.5em;
+    letter-spacing: 0.05em;
+    text-align: left;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.article-content-datetime {
+    color: #c4c4c4;
+    font-family: "Roboto";
+    font-size: 1em;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.article-content-datetime span {
+    color: #bb4d4d;
+}
+
+.article-content img {
+    width: 100%;
+    height: 290px;
+}
+
+.article-content-text {
+    color: #c4c4c4;
+    font-family: "Titillium Web";
+    font-size: 1.1em;
+}
+
+.article-content-text span {
+    color: #bb4d4d;
+}
+
+.article-content-text a {
+    color: #bb4d4d;
+    text-decoration: none;
+
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.article-content-text a:hover {
+    color: #ff5328;
+    text-decoration: underline;
+}
+
+.article-content p:nth-child(4){
+    text-indent: 3%;
+}
+
+/*  ARTICLE'S FINISHED */
