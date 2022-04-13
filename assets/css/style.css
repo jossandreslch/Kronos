@@ -477,6 +477,7 @@ body {
     letter-spacing: 0.04em;
     color: #c4c4c4;
     padding: 0 0 0 1em;
+    text-indent: 5%;
 }
 
 /* START OF RIGHT COLUMN */
@@ -1063,3 +1064,7 @@ footer .footer-content {
 }
 
 /*  ARTICLE'S FINISHED */
+
+/*  START RESPONSIVE */
+
+/*  FINISH RESPONSIVE */
