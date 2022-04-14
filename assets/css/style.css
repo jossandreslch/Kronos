@@ -35,13 +35,15 @@ body {
     height: 4.3em;
     justify-content: space-around;
     align-items: center;
+
+    min-width: 352px;
+
 }
 
 /* Título principal de KRONOS  */
 .main-title {
     padding: 0;
     margin: 0;
-    font-size: 1.4em;
     font-family: "TitleFont";
     width: 20%;
     display: flex;
@@ -49,9 +51,15 @@ body {
     align-items: center;
     letter-spacing: 0.15em;
 
+    height: 100%;
+
     transition-duration: 0.6s;
     transition-property: all;
     transition-timing-function: ease-in-out;
+}
+
+.main-title h1 {
+    font-size: 2em;
 }
 
 .main-title h1 a {
@@ -236,6 +244,28 @@ body {
 }
 
 .icon-github a:hover {
+    color:#ff5328;
+}
+
+/*  Icono de MENU MOVIL  */
+.icon-mobile-menu {
+    font-size: 2em;
+    margin: 0 1.5em 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    transition-duration: 0.2s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+
+    color: #fff;
+
+    display: none;
+}
+
+.icon-mobile-menu:hover {
+    transform: scale(1.2);
     color:#ff5328;
 }
 
@@ -1065,6 +1095,149 @@ footer .footer-content {
 
 /*  ARTICLE'S FINISHED */
 
+/*  START NAVEGACIÓN MOVIL RESPONSIVE */
+
+.nav-bar-mobile{
+    position: absolute;
+    left: 0;
+    width: 38%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #000000da;
+    border-right: 1px solid #bebebe;
+
+    display: none;
+    
+}
+
+.nav-bar-mobile ul{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar-mobile ul li{
+    margin: 1em 0.5em 1em 0.5em;
+    padding: 0.5em 0;
+    text-align: center;
+
+    font-family: "Titillium Web";
+    font-size: 1.4em;
+}
+
+.nav-bar-mobile ul li a {
+    text-decoration: none;
+    color: #c4c4c4;
+
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+
+}
+
+.nav-bar-mobile ul li a:hover{
+    color: #ff5328;
+    text-decoration: underline;
+}
+
+/*  FINISH NAVEGACIÓN MOVIL RESPONSIVE */
+
+
 /*  START RESPONSIVE */
+
+@media screen and (max-width: 854px) {
+    .nav-bar{
+        display: none;
+    }
+    .icon-github{
+        display: none;
+    }
+
+    .sup-bar{
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+
+        min-width: 352px;
+    }
+
+    .main-title{
+        float: right;
+        width: 60%;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .main-title:hover{
+        transform: none;
+    }
+
+    .main-title h1 {
+        font-size: 2.2em;
+    }
+
+    .icon-mobile-menu{
+        display: block;
+        float: left;
+        width: 40%;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+
+    .icon-mobile-menu i{
+        font-size: 1.4em;
+        height: 100%;
+        line-height: 1.5em;
+        width: fit-content;
+        padding-left: 18%;
+        cursor: pointer;
+
+        transition-duration: 0.3s;
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+    }
+
+    .icon-mobile-menu i:hover{
+        color: #ff5328;
+    }
+
+    .icon-mobile-menu:hover {
+        transform: none;
+        color: #fff;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    .nav-bar-mobile{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .nav-bar-mobile{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .nav-bar-mobile{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 352px) {
+    .nav-bar-mobile{
+        width: 100%;
+    }
+}
+
 
 /*  FINISH RESPONSIVE */
