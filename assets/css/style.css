@@ -36,8 +36,7 @@ body {
     justify-content: space-around;
     align-items: center;
 
-    min-width: 352px;
-
+    min-width: 256px;
 }
 
 /* Título principal de KRONOS  */
@@ -277,6 +276,8 @@ body {
     align-items: center;
     justify-content: space-around;
     height: 89vh;
+
+    min-width: 256px;
 }
 
 .pres-center{
@@ -309,7 +310,7 @@ body {
     margin: 0 auto;
     color: #c4c4c4;
     font-family: "Roboto";
-    font-size: 0.9em;
+    font-size: 1em;
     letter-spacing: 0.1em;
 
     display: flex;
@@ -1106,7 +1107,7 @@ footer .footer-content {
     display: flex;
     justify-content: center;
 
-    background-color: #000000da;
+    background-color: #000000ee;
     border-right: 1px solid #bebebe;
 
     display: none;
@@ -1150,6 +1151,13 @@ footer .footer-content {
 
 /*  START RESPONSIVE */
 
+@media screen and (min-width: 855px){
+    .nav-bar-mobile{
+        display: none;
+        visibility: hidden;
+    }
+}
+
 @media screen and (max-width: 854px) {
     .nav-bar{
         display: none;
@@ -1162,8 +1170,6 @@ footer .footer-content {
         display: inline-block;
         padding: 0;
         margin: 0;
-
-        min-width: 352px;
     }
 
     .main-title{
@@ -1213,17 +1219,59 @@ footer .footer-content {
         color: #fff;
     }
 
+    .icon-mobile-menu-close {
+        color: #fff;
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: right;
+    }
+
+    .icon-mobile-menu-close i{
+        font-size: 1.8em;
+        margin-top: 4%;
+        margin-right: 7%;
+        cursor: pointer;
+
+        transition-duration: 0.3s;
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+    }
+
+    .icon-mobile-menu-close i:hover{
+        color: #ff5328;
+    }
+
+    .pres-center {
+        width: 100%;
+    }
+
+    .pres-center-p{
+        width: 75%;
+        font-size: 1.1em;
+    }
+
 }
 
 @media screen and (max-width: 650px) {
     .nav-bar-mobile{
         width: 50%;
     }
+
+    .pres-center-p{
+        width: 90%;
+        font-size: 1.1em;
+    }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 520px) {
     .nav-bar-mobile{
         width: 60%;
+    }
+
+    .pres-center-p{
+        width: 100%;
+        font-size: 1.1em;
     }
 }
 
@@ -1236,6 +1284,16 @@ footer .footer-content {
 @media screen and (max-width: 352px) {
     .nav-bar-mobile{
         width: 100%;
+    }
+
+    .sup-bar{
+        min-width: 256px;
+    }
+    .main-title{
+        width: fit-content;
+    }
+    .icon-mobile-menu {
+        width: fit-content;
     }
 }
 
