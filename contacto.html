@@ -32,6 +32,10 @@
             <section class="section-a">
 
                 <header class="sup-bar">
+
+                    <div class="icon-mobile-menu" onclick="mobileMenu(), activeOption()">
+                        <i class="fa-solid fa-bars" id="iconMenu"></i>
+                    </div>
     
                     <div class="main-title">
                         <h1><a href="./index.html">KAXAROS</a></h1>
@@ -70,6 +74,24 @@
                     </div>
     
                 </header>
+
+                <div class="nav-bar-mobile" id="nav-bar-mobile">
+
+                    <div class="icon-mobile-menu-close">
+                        <i class="fa-solid fa-xmark" onclick="closeMobileMenu(), activeOption()"></i>
+                    </div>
+
+                    <ul>
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./software.html">Software</a></li>
+                        <li><a href="./ciberseguridad.html">OSINT</a></li>
+                        <li><a href="./ingenieria.html">Ingeniería</a></li>
+                        <li><a href="./politica.html">Pensares</a></li>
+                        <li><a href="./acerca.html">Acerca</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                    </ul>
+
+                </div>
 
                 <!-- INICIA EL CONTENIDO DE LA PÁGINA -->
     
@@ -115,6 +137,10 @@
             </section>
 
         </div>
+
+        <!-- Script js -->
+
+        <script type="application/javascript" src="./assets/js/script.js"></script>
 
         <!-- SMTP JS for sending email -->
         <script src="https://smtpjs.com/v3/smtp.js"></script>
